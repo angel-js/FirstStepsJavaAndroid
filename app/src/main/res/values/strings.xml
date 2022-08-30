@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Mi primera APP</string>
+    <string name="btn_suma">Calcular una Suma!</string>
+    <string name="btn_vamos">Calcular la rapidez</string>
+</resources>
