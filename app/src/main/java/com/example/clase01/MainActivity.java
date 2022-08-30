@@ -11,7 +11,7 @@ import java.text.MessageFormat;
 public class MainActivity extends AppCompatActivity {
 
     private TextView tvResultado;
-    private TextView tvVal1, tvVal2;
+    private TextView tvVal1, tvVal2, tvValRadio;
 
 
     @Override
@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         tvResultado = findViewById(R.id.tvMostrar);
         tvVal1 = findViewById(R.id.etValor1);
         tvVal2 = findViewById(R.id.etValor2);
+        tvValRadio = findViewById(R.id.etValorRadio);
         tvResultado.setText("Hola Mundo v2.0");
 
     }
@@ -43,5 +44,22 @@ public class MainActivity extends AppCompatActivity {
         String rapidezMMStr = String.valueOf(mtsMin);
         tvResultado.setText(MessageFormat.format("{0}", rapidezKmHStr + " Km/H " + rapidezMMStr + " Mts/M"));
 
+    }
+
+    // Area
+
+    public void calcularAreaCirculo(View v){
+        double x = Integer.parseInt(tvValRadio.getText().toString());
+        double y = (3.14 * Math.pow(x,2));
+        String z = (String.valueOf(y));
+        tvResultado.setText(MessageFormat.format("{0}", "El Area del Radio "+ x + " Es de "+ z + "cm3"));
+    }
+
+    // Perimetro
+    public void calcularPerimetroCirculo(View v){
+        double x = Integer.parseInt(tvValRadio.getText().toString());
+        double y = (2 * 3.14 * x);
+        String z = (String.valueOf(y));
+        tvResultado.setText(MessageFormat.format("{0}", "El Perimetro del Radio "+ x + " Es de "+ z + "cm"));
     }
 }

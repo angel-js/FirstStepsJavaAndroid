@@ -11,19 +11,19 @@
         android:layout_width="232dp"
         android:layout_height="77dp"
         android:layout_marginStart="104dp"
-        android:layout_marginTop="216dp"
-        android:textSize="25dp"
+        android:layout_marginBottom="24dp"
         android:rotationX="-25"
         android:text="@string/app_name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCalcular" />
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/etValor1"
         android:layout_width="296dp"
         android:layout_height="77dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="65dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="Ingrese la distancia recorrida"
         android:inputType="number"
@@ -35,8 +35,8 @@
         android:id="@+id/etValor2"
         android:layout_width="284dp"
         android:layout_height="78dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="Ingrese el tiempo"
         android:inputType="number"
@@ -44,26 +44,69 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etValor1" />
 
+    <EditText
+        android:id="@+id/etValorRadio"
+        android:layout_width="284dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="Ingrese el Radio de un circulo"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCalcularRapidez" />
+
     <Button
         android:id="@+id/btnCalcular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
-        android:layout_marginEnd="88dp"
+        android:layout_marginStart="107dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="40dp"
         android:onClick="calcular"
         android:text="@string/btn_suma"
+        app:layout_constraintBottom_toTopOf="@+id/btnCalcularRapidez"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etValor2" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etValor2"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btnCalcularRapidez"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="84dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="100dp"
         android:onClick="calcularDistancia"
         android:text="@string/btn_vamos"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnCalcular" />
+
+    <Button
+        android:id="@+id/btnCalcularAreaCirculo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="32dp"
+        android:onClick="calcularAreaCirculo"
+        android:text="@string/btn_areaCir"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etValorRadio" />
+
+    <Button
+        android:id="@+id/btnCalcularPerimetroCirculo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="96dp"
+        android:onClick="calcularPerimetroCirculo"
+        android:text="@string/btn_perimetroCir"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etValorRadio" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
